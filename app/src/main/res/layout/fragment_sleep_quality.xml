@@ -17,7 +17,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".sleepquality.SleepQualityFragment">
+        tools:context=".sleepquality.SleepQualityFragment"
+        android:background="#E1E7EA">
 
         <TextView
             android:id="@+id/title_text"
@@ -109,6 +110,62 @@
             app:layout_constraintTop_toTopOf="@+id/quality_four_image"
             app:srcCompat="@drawable/ic_sleep_5"
             android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(5)}"/>
+
+        <TextView
+            android:id="@+id/textViewTips"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For Better Sleep Tips, Click the below Button"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quality_four_image"
+            app:layout_constraintVertical_bias="0.222" />
+
+        <Button
+            android:id="@+id/tipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SleepButtons"
+            android:layout_marginBottom="212dp"
+            android:text="Tips"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTips"
+            app:layout_constraintVertical_bias="0.74" />
+
+        <TextView
+            android:id="@+id/tiptext"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tipsDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quality_four_image" />
+
+        <TextView
+            android:id="@+id/tipsDescription"
+            android:visibility="gone"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Stick to a sleep schedule.\n\n2. Pay attention to what you eat and drink.\n\n3. Create a restful environment.\n\n4. Limit daytime naps. \n\n5.Include physical activity"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quality_four_image" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
